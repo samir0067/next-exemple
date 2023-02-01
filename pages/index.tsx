@@ -1,8 +1,7 @@
 import Head from 'next/head'
 import {Layout} from "../src/components/layout";
 import axios from "axios";
-import Link from "next/link"
-import {useEffect} from "react";
+import Link from "next/link";
 
 const Home = ({data}: any) => {
   const styles = {
@@ -10,10 +9,7 @@ const Home = ({data}: any) => {
     padding: 10,
     borderBottom: "1px solid #DDD",
   }
-  console.log("Côté Client next", process.env.NEXT_PUBLIC_API_ROOT)
-  useEffect(() => {
-    localStorage.setItem("jwt-token", "data")
-  }, [])
+
   return (
     <>
       <Head>
@@ -42,7 +38,6 @@ const Home = ({data}: any) => {
 
 export const getServerSideProps = async () => {
   const {data} = await axios.get(`${process.env.API_GEO}/regions`)
-  console.log("Côté serveur", process.env.API_ROOT)
   return {props: {data}}
 }
 
