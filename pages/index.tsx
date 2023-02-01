@@ -37,7 +37,7 @@ const Home = ({data}: any) => {
 }
 
 export const getServerSideProps = async () => {
-  const {data} = await axios.get(`${process.env.API_GEO}/regions`)
+  const {data} = await axios.get(`https://geo.api.gouv.fr/regions`)
   return {props: {data}}
 }
 
