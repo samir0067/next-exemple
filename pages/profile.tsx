@@ -60,7 +60,6 @@ const Profile = () => {
   );
 };
 
-
 const NameLink = ({name}: any) => (
   <li>
     <Link href={`/profile?title=${name}`}>{name}</Link>

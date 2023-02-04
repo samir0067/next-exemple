@@ -3,8 +3,6 @@ import {Layout} from "../../src/components/layout";
 import Head from "next/head";
 
 const Items = () => {
-
-
   return (
     <>
       <Head>
