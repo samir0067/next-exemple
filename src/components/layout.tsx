@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 import {Header} from "./header";
 
 type LayoutProps = {
-  children: JSX.Element | string;
+  children: JSX.Element | string | JSX.Element[];
   className?: string;
 }
 
